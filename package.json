@@ -1,0 +1,45 @@
+{
+    "name": "vscode-setup",
+    "version": "0.1.0",
+    "description": "В этом репозитории лежат конфигурационные файлы для работы в vscode",
+    "scripts": {
+        "lint": "eslint --color ./src/**/*.js",
+        "precommit": "npm run lint",
+        "postinstall": "husky install && husky add pre-commit \"npm run precommit\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/scorgi86/vscode.git"
+    },
+    "keywords": [
+        "vs code",
+        "vscode",
+        "vscode setut"
+    ],
+    "author": "Бут А.С",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/scorgi86/vscode/issues"
+    },
+    "homepage": "https://github.com/scorgi86/vscode#readme",
+    "husky": {
+        "pre-commit": "npm run lint"
+    },
+    "lint-staged": {
+        "*.(js|jsx)": [
+            "npm run lint"
+        ]
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "eslint": "^7.15.0",
+        "eslint-config-standard": "^16.0.2",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "husky": "^5.0.4",
+        "lint-staged": "^10.5.3",
+        "pinst": "^2.1.1",
+        "prettier": "^2.2.1"
+    }
+}
