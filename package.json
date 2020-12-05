@@ -3,9 +3,17 @@
     "version": "0.1.0",
     "description": "В этом репозитории лежат конфигурационные файлы для работы в vscode",
     "scripts": {
-        "lint": "eslint --color ./src/**/*.js",
         "precommit": "npm run lint",
-        "postinstall": "husky install && husky add pre-commit \"npm run precommit\""
+        "postinstall": "npm install -g wasaby-cli && husky install && husky add pre-commit \"npm run precommit\"",
+        "build": "npm run build:deps && npm run build:app",
+        "build:deps": "wasaby-cli --tasks=initStore",
+        "build:app": "wasaby-cli --tasks=build",
+        "start": "wasaby-cli --tasks=startTest --server",
+        "test": "wasaby-cli %NODE_DEBUG_OPTION% --tasks=startTest --node --report=console",
+        "build:prepare": "wasaby-cli --tasks=prepare",
+        "compile": "saby-typescript --compiler",
+        "lint": "eslint --color ./src/**/*.js",
+        "watcher": "wasaby-cli --tasks=build --watcher"
     },
     "repository": {
         "type": "git",
