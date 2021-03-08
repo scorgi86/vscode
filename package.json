@@ -4,7 +4,7 @@
     "description": "В этом репозитории лежат конфигурационные файлы для работы в vscode",
     "scripts": {
         "postinstall": "npm run init",
-        "init": "npx husky init && rm -rf .husky/pre-commit && npx husky add .husky/pre-commit \"npm run precommit\" && npm run initWasabyCli",
+        "init": "npm install -g husky && husky init && rm -rf .husky/pre-commit && husky add .husky/pre-commit \"npm run precommit\" && npm run initWasabyCli",
         "initWasabyCli": "npm install -g wasaby-cli",
         "precommit": "npx lint-staged",
         "build": "npm run build:deps && npm run build:app",
