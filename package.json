@@ -37,19 +37,28 @@
         }
     },
     "lint-staged": {
-        "./src/**/*.ts": "eslint --color --cache"
+        "./src/**/*.ts": [
+            "eslint --color --cache --fix",
+            "tsc --pretty"
+        ]
     },
     "dependencies": {},
     "devDependencies": {
         "@tensor-corp/eslint-config": "^2.0.7",
-        "eslint": "^7.15.0",
+        "@types/node": "^14.14.32",
+        "@types/requirejs": "^2.1.32",
+        "@typescript-eslint/eslint-plugin": "^4.16.1",
+        "@typescript-eslint/eslint-plugin-tslint": "^4.16.1",
+        "@typescript-eslint/parser": "^4.16.1",
+        "eslint": "^7.21.0",
         "eslint-config-standard": "^16.0.2",
+        "eslint-plugin-eslint-comments": "^3.2.0",
         "eslint-plugin-import": "^2.22.1",
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-promise": "^4.2.1",
         "lint-staged": "^10.5.3",
         "pinst": "^2.1.1",
         "prettier": "^2.2.1",
-        "saby-typescript": "git+https://github.com/saby/TypeScript.git#rc-21.1200"
+        "typescript": "^4.2.3"
     }
 }
