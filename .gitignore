@@ -2,6 +2,7 @@ node_modules
 *.husky
 package-lock.json
 .eslintcache
+.tsconfig-lint.json
 dist
 src/**/*.js
 *.tsbuildinfo
