@@ -1,0 +1,7 @@
+{
+    "extends": "./tsconfig.json",
+    "include": [
+    "C:/work/vscode/src/Calculator.test.ts",
+    "C:/work/vscode/src/Calculator.ts",
+    ]
+}

@@ -2,3 +2,7 @@ node_modules
 *.husky
 package-lock.json
 .eslintcache
+dist
+src/**/*.js
+*.tsbuildinfo
+./nyc_output/

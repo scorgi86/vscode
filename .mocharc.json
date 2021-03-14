@@ -1,0 +1,10 @@
+{
+    "extension": ["ts"],
+    "spec": "src/**/*.ts",
+    "require": "ts-node/register",
+    "color": true,
+    "exclude": [
+        "./node_modules/",
+        "./dist/"
+    ]
+}
