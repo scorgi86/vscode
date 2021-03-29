@@ -4,7 +4,7 @@
     "description": "В этом репозитории лежат конфигурационные файлы для работы в vscode",
     "scripts": {
         "postinstall": "npm run installGlobals && npm run init",
-        "installGlobals": "npm install -g husky mocha ts-node",
+        "installGlobals": "npm install -g gulp husky mocha ts-node",
         "init": "husky init && rm -rf .husky/pre-commit && husky add .husky/pre-commit \"npm run precommit\"",
         "precommit": "npx lint-staged",
         "test": "mocha -r ts-node/register src/**/*.test.ts  --watch --watch-files *.test.ts"
@@ -32,6 +32,7 @@
     },
     "lint-staged": {
         "./src/**/*.ts": [
+            "eslint --color --cache",
             ".bash/tsc-staged.sh"
         ]
     },
@@ -58,6 +59,18 @@
         "prettier": "^2.2.1",
         "sinon": "^9.2.4",
         "ts-node": "^9.1.1",
-        "typescript": "^4.2.3"
+        "typescript": "^4.2.3",
+        "babel-core": "^6.26.3",
+        "babel-preset-env": "^1.7.0",
+        "gulp": "^4.0.0",
+        "gulp-autoprefixer": "^3.1.0",
+        "gulp-babel": "^7.0.1",
+        "gulp-concat": "^2.6.0",
+        "gulp-connect": "^5.7.0",
+        "gulp-plumber": "^1.2.1",
+        "gulp-pug": "^3.3.0",
+        "gulp-stylus": "^2.7.0",
+        "jeet": "^7.2.0",
+        "rupture": "^0.6.1"
     }
 }

@@ -20,6 +20,10 @@
     ],
     "workbench.colorTheme": "Tokyo Night",
     "window.zoomLevel": 1,
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+    ],
     "[javascript]": {
         "editor.tabSize": 4
     },
